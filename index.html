@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta name="google-site-verification" content="VHAsJXWfOzMqCnXzaeckv5K0nLY1lIAuxXNFzBfSc0A" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Shadman Wasif Faruque | Chess Player, Web Developer & Creator</title>
+    <meta name="title" content="Shadman Wasif Faruque | Chess Player, Web Developer & Creator">
+    <meta name="author" content="Shadman Wasif Faruque">
+    <meta name="owner" content="Shadman Wasif Faruque">
+    <meta name="description" content="Official portfolio of Shadman Wasif Faruque (FIDE ID: 10294813) - Bangladeshi competitive chess player, web developer, and content creator behind SWF Knowledge. Contact: shadman09rony17@gmail.com">
+    <meta name="keywords" content="Shadman Wasif Faruque, Shadman Wasif, FIDE 10294813, Bangladesh Chess Federation, iamshadman, SWF Knowledge, Web Developer Bangladesh, Chess Player">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shadman Wasif Faruque | Portfolio & Profile">
+    <meta property="og:description" content="Competitive chess player (FIDE ID: 10294813), web developer, and educational content creator at SWF Knowledge. Contact: shadman09rony17@gmail.com">
+    <meta property="og:image" content="https://imgpile.com/images/Pryyx2j.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shadman Wasif Faruque | Portfolio">
+    <meta name="twitter:description" content="Bangladeshi competitive chess player, web developer, and creator behind SWF Knowledge.">
+    <meta name="twitter:image" content="https://imgpile.com/images/Pryyx2j.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        chess: {
+                            gold: '#fbbf24',
+                            dark: '#1e293b',
+                            board: '#779952',
+                            lightBoard: '#edeed1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Utility Styles -->
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-glow {
+            box-shadow: 0 0 50px -10px rgba(14, 165, 233, 0.3);
+        }
+        .chess-square {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-card transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-9 h-9 rounded-xl overflow-hidden border border-sky-400 flex items-center justify-center bg-slate-800 group-hover:scale-105 transition-transform">
+                    <img src="https://imgpile.com/images/Pryyx2j.jpg" 
+                         onerror="handleImageError(this)" 
+                         alt="Shadman Wasif" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-base leading-tight tracking-tight">Shadman Wasif</span>
+                    <span class="text-xs text-sky-600 dark:text-sky-400 font-medium">Chess • Tech • SWF Knowledge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#about" class="hover:text-sky-500 transition-colors">About</a>
+                <a href="#chess" class="hover:text-sky-500 transition-colors">Chess Career</a>
+                <a href="#dev" class="hover:text-sky-500 transition-colors">Web Dev</a>
+                <a href="#youtube" class="hover:text-sky-500 transition-colors">SWF Knowledge</a>
+                <a href="#puzzle" class="hover:text-sky-500 transition-colors">Chess Puzzle</a>
+                <a href="#contact" class="hover:text-sky-500 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <!-- Dark Mode Toggle -->
+                <button id="themeToggle" aria-label="Toggle Dark Mode" class="p-2 rounded-xl bg-slate-200/60 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+                    <i id="themeIcon" class="fa-solid fa-moon text-base"></i>
+                </button>
+
+                <!-- Action Button -->
+                <a href="https://www.chess.com/member/shadmanwasif" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/20 transition-all hover:-translate-y-0.5">
+                    <i class="fa-solid fa-chess-knight"></i> Play on Chess.com
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-xl bg-slate-200/60 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300">
+                    <i class="fa-solid fa-bars text-base"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200/20 dark:border-slate-800/40 bg-slate-100/90 dark:bg-slate-900/90 px-4 py-3 space-y-2">
+            <a href="#about" class="block py-2 text-sm font-medium hover:text-sky-500">About</a>
+            <a href="#chess" class="block py-2 text-sm font-medium hover:text-sky-500">Chess Career</a>
+            <a href="#dev" class="block py-2 text-sm font-medium hover:text-sky-500">Web Dev</a>
+            <a href="#youtube" class="block py-2 text-sm font-medium hover:text-sky-500">SWF Knowledge</a>
+            <a href="#puzzle" class="block py-2 text-sm font-medium hover:text-sky-500">Chess Puzzle</a>
+            <a href="#contact" class="block py-2 text-sm font-medium hover:text-sky-500">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-12 md:py-20 overflow-hidden">
+        <div class="absolute inset-0 -z-10 opacity-30 dark:opacity-20 pointer-events-none">
+            <div class="absolute top-10 left-1/4 w-72 h-72 bg-sky-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-emerald-400 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Profile Image Card -->
+                <div class="md:col-span-5 flex flex-col items-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-sky-500 via-emerald-400 to-indigo-500 opacity-75 blur transition duration-500 group-hover:opacity-100"></div>
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden bg-slate-900 border-2 border-white/20 shadow-2xl flex items-center justify-center">
+                            <!-- Direct Image Embedding with Multiple Image Fallbacks -->
+                            <img id="shadmanPortrait"
+                                 src="https://imgpile.com/images/Pryyx2j.jpg" 
+                                 onerror="handleImageError(this)" 
+                                 alt="Shadman Wasif Faruque" 
+                                 class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <!-- Direct Links to Photo Host Pages -->
+                    <div class="mt-3 flex items-center gap-3 text-xs">
+                        <a href="https://imgpile.com/m/Pryyx2j" target="_blank" class="inline-flex items-center gap-1.5 text-sky-600 dark:text-sky-400 hover:underline">
+                            <i class="fa-solid fa-image"></i> View on Imgpile
+                        </a>
+                        <span class="text-slate-400">•</span>
+                        <a href="https://ibb.co.com/kgmD2xq7" target="_blank" class="inline-flex items-center gap-1.5 text-sky-600 dark:text-sky-400 hover:underline">
+                            <i class="fa-solid fa-image"></i> View on ImgBB
+                        </a>
+                    </div>
+
+                    <!-- FIDE Badge -->
+                    <div class="mt-4 inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card border border-amber-500/30 shadow-md">
+                        <span class="flex h-3 w-3 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                        </span>
+                        <span class="text-xs font-semibold tracking-wide uppercase text-amber-700 dark:text-amber-400">
+                            FIDE Registered • ID: <span class="font-mono font-bold text-slate-900 dark:text-white">10294813</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bio Content -->
+                <div class="md:col-span-7 text-center md:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-600 dark:text-sky-400 text-xs font-semibold tracking-wider uppercase">
+                        🇧🇩 Bangladesh Chess Federation
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-display font-extrabold tracking-tight leading-tight">
+                        Hi, I'm <span class="gradient-text">Shadman Wasif Faruque</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+                        A passionate <strong class="text-slate-900 dark:text-white font-semibold">competitive chess player</strong>, <strong class="text-slate-900 dark:text-white font-semibold">web developer</strong>, and <strong class="text-slate-900 dark:text-white font-semibold">educational content creator</strong> born on October 9, 2014. I build web projects, play official FIDE chess tournaments, and share science & coding on YouTube.
+                    </p>
+
+                    <!-- Quick Stats Pill Container -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="p-3 rounded-2xl glass-card text-center md:text-left border border-slate-200/50 dark:border-slate-800">
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Date of Birth</div>
+                            <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Oct 9, 2014</div>
+                        </div>
+                        <div class="p-3 rounded-2xl glass-card text-center md:text-left border border-slate-200/50 dark:border-slate-800">
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Current Age</div>
+                            <div id="liveAgeText" class="font-bold text-sm sm:text-base text-emerald-600 dark:text-emerald-400 font-mono">Calculating...</div>
+                        </div>
+                        <div class="p-3 rounded-2xl glass-card text-center md:text-left border border-slate-200/50 dark:border-slate-800 col-span-2 sm:col-span-1">
+                            <div class="text-xs text-slate-500 dark:text-slate-400">YouTube Channel</div>
+                            <div class="font-bold text-sm sm:text-base text-red-600 dark:text-red-400">SWF Knowledge</div>
+                        </div>
+                    </div>
+
+                    <!-- Action Link Buttons -->
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-4">
+                        <a href="mailto:shadman09rony17@gmail.com" class="px-5 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm shadow-lg shadow-sky-600/20 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-envelope"></i> Send Email
+                        </a>
+                        <a href="https://www.chess.com/member/shadmanwasif" target="_blank" class="px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold text-sm shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-chess"></i> Chess.com
+                        </a>
+                        <a href="https://github.com/shadmanwasif" target="_blank" class="px-5 py-3 rounded-xl bg-slate-900 dark:bg-slate-800 text-white font-semibold text-sm shadow-lg hover:bg-slate-800 dark:hover:bg-slate-700 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.youtube.com/@SWF-Knowledge" target="_blank" class="px-5 py-3 rounded-xl bg-red-600 text-white font-semibold text-sm shadow-lg hover:bg-red-500 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-youtube"></i> SWF Knowledge
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Core Passions</h2>
+                <p class="mt-2 text-3xl font-display font-extrabold text-slate-900 dark:text-white">Three Pillars of Excellence</p>
+                <p class="mt-3 text-slate-600 dark:text-slate-400">Combining logical strategy on the 64 squares with modern software craft and interactive education.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Pillar 1: Chess -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-emerald-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chess-king"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Competitive Chess</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Registered under the <strong>Bangladesh Chess Federation</strong> with FIDE ID <strong>10294813</strong>. Competes actively in rated tournaments and online platforms like Chess.com and Lichess.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
+                        <span>FIDE Rated Player</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Web Dev -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-sky-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Web Development</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Crafting interactive, user-friendly, and modern web applications using HTML5, CSS3, JavaScript, and responsive UI frameworks. Open-source work is featured on GitHub.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between text-xs text-sky-600 dark:text-sky-400 font-semibold">
+                        <span>GitHub Creator</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Educational Content -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-red-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-600 dark:text-red-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">SWF Knowledge</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Host and creator at <strong>@SWF-Knowledge</strong> on YouTube. Shares intriguing science facts, programming concepts, and general knowledge to inspire fellow learners.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between text-xs text-red-600 dark:text-red-400 font-semibold">
+                        <span>Content Creator</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chess Hub Section -->
+    <section id="chess" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Mind Over Board</span>
+                    <h2 class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">Chess Profile & Platforms</h2>
+                </div>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mt-2 md:mt-0 max-w-md">
+                    Representing Bangladesh in classical tournaments and sharpening tactical vision daily through online games.
+                </p>
+            </div>
+
+            <!-- Profile Cards Grid -->
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Card 1: FIDE Official -->
+                <div class="p-6 rounded-2xl glass-card border border-amber-500/30 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -right-6 -bottom-6 opacity-10 text-amber-500 text-9xl pointer-events-none">
+                        <i class="fa-solid fa-chess-rook"></i>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 text-xs font-bold">FIDE Official</span>
+                            <i class="fa-solid fa-award text-amber-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">FIDE Registration</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Federation: Bangladesh Chess Federation (BAN)</p>
+                        
+                        <div class="my-6 space-y-3">
+                            <div class="flex justify-between items-center text-sm p-2 rounded-lg bg-slate-100 dark:bg-slate-800/60">
+                                <span class="text-slate-500 dark:text-slate-400">FIDE ID</span>
+                                <span class="font-mono font-bold text-slate-900 dark:text-white">10294813</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm p-2 rounded-lg bg-slate-100 dark:bg-slate-800/60">
+                                <span class="text-slate-500 dark:text-slate-400">Federation</span>
+                                <span class="font-semibold text-slate-900 dark:text-white">Bangladesh 🇧🇩</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm p-2 rounded-lg bg-slate-100 dark:bg-slate-800/60">
+                                <span class="text-slate-500 dark:text-slate-400">Status</span>
+                                <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Active Competitor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="copyFideID()" class="w-full py-2.5 px-4 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-800 dark:text-amber-300 font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-copy"></i> Copy FIDE ID
+                    </button>
+                </div>
+
+                <!-- Card 2: Chess.com -->
+                <div class="p-6 rounded-2xl glass-card border border-emerald-500/30 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -right-6 -bottom-6 opacity-10 text-emerald-500 text-9xl pointer-events-none">
+                        <i class="fa-solid fa-chess-knight"></i>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-bold">Chess.com</span>
+                            <span class="text-xs text-slate-400 font-mono">@shadmanwasif</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Chess.com Member</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Daily games, rapid battles & tactics rating</p>
+
+                        <div class="my-6 grid grid-cols-2 gap-2 text-center">
+                            <div class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/60">
+                                <i class="fa-solid fa-bolt text-amber-500 mb-1 text-xs"></i>
+                                <div class="text-xs text-slate-500">Blitz / Rapid</div>
+                                <div class="font-bold text-slate-900 dark:text-white text-sm">Active</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/60">
+                                <i class="fa-solid fa-puzzle-piece text-purple-500 mb-1 text-xs"></i>
+                                <div class="text-xs text-slate-500">Puzzles</div>
+                                <div class="font-bold text-slate-900 dark:text-white text-sm">Active</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.chess.com/member/shadmanwasif" target="_blank" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-external-link"></i> Visit Chess.com Profile
+                    </a>
+                </div>
+
+                <!-- Card 3: Lichess -->
+                <div class="p-6 rounded-2xl glass-card border border-sky-500/30 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -right-6 -bottom-6 opacity-10 text-sky-500 text-9xl pointer-events-none">
+                        <i class="fa-solid fa-chess-queen"></i>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-700 dark:text-sky-400 text-xs font-bold">Lichess.org</span>
+                            <span class="text-xs text-slate-400 font-mono">@iamshadman</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Lichess Arena</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Open source platform competitions & studies</p>
+
+                        <div class="my-6 grid grid-cols-2 gap-2 text-center">
+                            <div class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/60">
+                                <i class="fa-solid fa-fire text-orange-500 mb-1 text-xs"></i>
+                                <div class="text-xs text-slate-500">Bullet/Blitz</div>
+                                <div class="font-bold text-slate-900 dark:text-white text-sm">Active</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/60">
+                                <i class="fa-solid fa-book-open text-sky-500 mb-1 text-xs"></i>
+                                <div class="text-xs text-slate-500">Studies</div>
+                                <div class="font-bold text-slate-900 dark:text-white text-sm">Active</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://lichess.org/@/iamshadman" target="_blank" class="w-full py-2.5 px-4 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs transition-all text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-external-link"></i> Visit Lichess Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Chess Tactics Module -->
+    <section id="puzzle" class="py-12 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                        Interactive Widget
+                    </span>
+                    <h2 class="text-3xl font-display font-bold">Solve Shadman's Mini Chess Puzzle</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        White to move and find the classic Back-Rank Checkmate pattern! Can you find the winning move for White?
+                    </p>
+                    <div id="puzzleStatus" class="p-3 rounded-xl bg-slate-800 text-xs font-mono text-emerald-400 border border-slate-700">
+                        Status: White's turn. Find the best move!
+                    </div>
+                    <button onclick="resetPuzzle()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold transition-colors">
+                        <i class="fa-solid fa-rotate-left mr-1"></i> Reset Puzzle Board
+                    </button>
+                </div>
+
+                <!-- Puzzle Board Container -->
+                <div class="lg:col-span-7 flex justify-center">
+                    <div class="w-full max-w-sm bg-slate-950 p-3 rounded-2xl shadow-2xl border border-slate-800">
+                        <!-- 8x8 Board Container -->
+                        <div id="chessBoard" class="grid grid-cols-8 grid-rows-8 border-2 border-slate-700 rounded-lg overflow-hidden">
+                            <!-- Populated via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development & GitHub Section -->
+    <section id="dev" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Software & Code</span>
+                <h2 class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">Web Development Projects</h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                    Explore code repositories and projects hosted on Shadman's GitHub profile (<a href="https://github.com/shadmanwasif" target="_blank" class="text-sky-500 underline font-mono">@shadmanwasif</a>).
+                </p>
+            </div>
+
+            <!-- Tech Stack Badges -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="px-3 py-1.5 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-semibold border border-orange-500/20 flex items-center gap-2">
+                    <i class="fa-brands fa-html5"></i> HTML5
+                </span>
+                <span class="px-3 py-1.5 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-500/20 flex items-center gap-2">
+                    <i class="fa-brands fa-css3-alt"></i> CSS3 / Tailwind
+                </span>
+                <span class="px-3 py-1.5 rounded-xl bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 text-xs font-semibold border border-yellow-500/20 flex items-center gap-2">
+                    <i class="fa-brands fa-js"></i> JavaScript ES6+
+                </span>
+                <span class="px-3 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold border border-emerald-500/20 flex items-center gap-2">
+                    <i class="fa-brands fa-git-alt"></i> Git & GitHub
+                </span>
+                <span class="px-3 py-1.5 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold border border-indigo-500/20 flex items-center gap-2">
+                    <i class="fa-solid fa-laptop-code"></i> Responsive Web Design
+                </span>
+            </div>
+
+            <!-- Project Feature Cards -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                            <span>Open Source</span>
+                            <i class="fa-solid fa-folder-open text-sky-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Interactive Web Applications</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                            Custom web utilities and responsive websites developed with vanilla JavaScript and modern CSS architectures.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">JavaScript / HTML</span>
+                        <a href="https://github.com/shadmanwasif" target="_blank" class="text-sky-500 hover:text-sky-400 text-xs font-bold flex items-center gap-1">
+                            View Repos <i class="fa-solid fa-arrow-up-right-from-square text-3xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                            <span>Chess Utilities</span>
+                            <i class="fa-solid fa-chess text-emerald-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Chess Logic & Games</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                            Algorithmic implementations for chess board visuals, puzzle trainers, and tactical puzzle solving interfaces.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">JS / Game Logic</span>
+                        <a href="https://github.com/shadmanwasif" target="_blank" class="text-sky-500 hover:text-sky-400 text-xs font-bold flex items-center gap-1">
+                            View Repos <i class="fa-solid fa-arrow-up-right-from-square text-3xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                            <span>Educational Tech</span>
+                            <i class="fa-solid fa-graduation-cap text-purple-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Science & Fact Hubs</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                            Web tools designed to accompany videos for <strong>SWF Knowledge</strong>, delivering quizzes and bite-sized learning.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">Web / Education</span>
+                        <a href="https://github.com/shadmanwasif" target="_blank" class="text-sky-500 hover:text-sky-400 text-xs font-bold flex items-center gap-1">
+                            View Repos <i class="fa-solid fa-arrow-up-right-from-square text-3xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Profile CTA Bar -->
+            <div class="mt-10 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-base">Check Out Shadman's GitHub</h4>
+                        <p class="text-xs text-slate-300">Explore open source projects, code samples, and repositories.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/shadmanwasif" target="_blank" class="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold text-xs transition-colors whitespace-nowrap">
+                    Visit @shadmanwasif
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SWF Knowledge YouTube Section -->
+    <section id="youtube" class="py-16 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-brands fa-youtube"></i> Educational YouTube Channel
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 dark:text-white">
+                        SWF Knowledge
+                    </h2>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        On <strong>SWF Knowledge</strong>, Shadman shares fascinating science facts, programming concepts, chess tips, and general knowledge designed to simplify complex ideas for learners of all ages.
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                                <i class="fa-solid fa-atom"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900 dark:text-white">Science Facts</h4>
+                                <p class="text-xs text-slate-500">Exploring space, physics, and nature's mysteries.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-500 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900 dark:text-white">Coding Concepts</h4>
+                                <p class="text-xs text-slate-500">Beginner-friendly web development & logic breakdowns.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900 dark:text-white">General Knowledge</h4>
+                                <p class="text-xs text-slate-500">Brain teasers, trivia, and educational topics.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.youtube.com/@SWF-Knowledge" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-sm shadow-lg shadow-red-600/20 transition-all">
+                        <i class="fa-brands fa-youtube text-base"></i> Subscribe to @SWF-Knowledge
+                    </a>
+                </div>
+
+                <!-- Interactive Fact Generator / Showcase Box -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-red-500/20 shadow-xl relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold">
+                                    SWF
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">SWF Knowledge Hub</h4>
+                                    <p class="text-xs text-slate-500">Interactive Trivia & Science Snippet</p>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-red-500/10 text-red-500 text-2xs font-bold uppercase">Featured</span>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-slate-900 text-white space-y-4 min-h-[160px] flex flex-col justify-center">
+                            <div class="text-xs text-red-400 font-mono flex items-center gap-2">
+                                <i class="fa-solid fa-sparkles"></i> <span id="factCategory">Science & Astronomy</span>
+                            </div>
+                            <p id="factText" class="text-base sm:text-lg font-medium leading-relaxed">
+                                "Did you know? Light from the Sun takes approximately 8 minutes and 20 seconds to reach planet Earth across 149.6 million kilometers!"
+                            </p>
+                        </div>
+
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 dark:text-slate-400">Click to discover another SWF Knowledge snippet:</span>
+                            <button onclick="generateRandomFact()" class="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-xs font-semibold transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-shuffle text-sky-500"></i> Next Snippet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Connect & Links Grid -->
+    <section id="contact" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Connect</span>
+                <h2 class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">Shadman's Online Presence</h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                    Connect or follow along on official chess platforms, GitHub repositories, YouTube, and Email.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+                <!-- Link 0: Direct Email -->
+                <a href="mailto:shadman09rony17@gmail.com" class="p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-slate-800 hover:border-amber-500 transition-all flex flex-col items-center text-center group sm:col-span-2 md:col-span-1">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="font-bold text-sm text-slate-900 dark:text-white">Email Me</span>
+                    <span class="text-2xs font-mono text-slate-500 dark:text-slate-400 mt-0.5 break-all">shadman09rony17@gmail.com</span>
+                </a>
+
+                <!-- Link 1: Chess.com -->
+                <a href="https://www.chess.com/member/shadmanwasif" target="_blank" class="p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-slate-800 hover:border-emerald-500 transition-all flex flex-col items-center text-center group">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chess-pawn"></i>
+                    </div>
+                    <span class="font-bold text-sm text-slate-900 dark:text-white">Chess.com</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">@shadmanwasif</span>
+                </a>
+
+                <!-- Link 2: Lichess -->
+                <a href="https://lichess.org/@/iamshadman" target="_blank" class="p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-slate-800 hover:border-sky-500 transition-all flex flex-col items-center text-center group">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-500 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chess-board"></i>
+                    </div>
+                    <span class="font-bold text-sm text-slate-900 dark:text-white">Lichess</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">@iamshadman</span>
+                </a>
+
+                <!-- Link 3: GitHub -->
+                <a href="https://github.com/shadmanwasif" target="_blank" class="p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-slate-800 hover:border-purple-500 transition-all flex flex-col items-center text-center group">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <span class="font-bold text-sm text-slate-900 dark:text-white">GitHub</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">@shadmanwasif</span>
+                </a>
+
+                <!-- Link 4: YouTube -->
+                <a href="https://www.youtube.com/@SWF-Knowledge" target="_blank" class="p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-slate-800 hover:border-red-500 transition-all flex flex-col items-center text-center group">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/10 text-red-500 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <span class="font-bold text-sm text-slate-900 dark:text-white">SWF Knowledge</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">YouTube Channel</span>
+                </a>
+            </div>
+
+            <!-- Quick Contact / Fan Note Modal Form -->
+            <div class="mt-12 max-w-xl mx-auto glass-card p-6 sm:p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white text-center mb-1">Send a Message or Challenge</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 text-center mb-2">Leave a note for Shadman or send a direct email</p>
+                <div class="text-center mb-6">
+                    <a href="mailto:shadman09rony17@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 text-xs font-mono hover:underline">
+                        <i class="fa-solid fa-paper-plane"></i> shadman09rony17@gmail.com
+                    </a>
+                </div>
+
+                <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
+                        <input type="text" required placeholder="Visitor Name / Chess Player" class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Message</label>
+                        <textarea rows="3" required placeholder="Let's play a game on Chess.com or collaborate on web projects!" class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-sky-600 to-emerald-600 text-white font-bold text-sm shadow-md hover:opacity-95 transition-opacity">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none px-4 py-3 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-2xl flex items-center gap-2 border border-slate-700">
+        <i id="toastIcon" class="fa-solid fa-check text-emerald-400"></i>
+        <span id="toastMsg">Action completed!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-8 bg-slate-950 text-slate-400 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-lg overflow-hidden flex items-center justify-center bg-slate-800 border border-sky-400">
+                    <img src="https://imgpile.com/images/Pryyx2j.jpg" onerror="handleImageError(this)" alt="S" class="w-full h-full object-cover">
+                </div>
+                <span>© <span id="currentYear"></span> Shadman Wasif Faruque • <a href="mailto:shadman09rony17@gmail.com" class="hover:underline text-sky-400">shadman09rony17@gmail.com</a></span>
+            </div>
+            <div class="flex items-center gap-4 text-slate-500">
+                <span>FIDE ID: 10294813</span>
+                <span>•</span>
+                <a href="#about" class="hover:text-slate-300 transition-colors">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application JavaScript Logic -->
+    <script>
+        // Multi-stage image fallback handler
+        function handleImageError(imgEl) {
+            const fallbacks = [
+                "https://i.ibb.co.com/kgmD2xq7/image.jpg",
+                "https://i.ibb.co/kgmD2xq7/image.jpg",
+                "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%230f172a'/><circle cx='200' cy='150' r='60' fill='%230ea5e9'/><path d='M100 320 C 100 230, 300 230, 300 320 Z' fill='%230ea5e9'/><text x='200' y='360' font-family='sans-serif' font-size='20' font-weight='bold' fill='%23f8fafc' text-anchor='middle'>Shadman Wasif</text></svg>"
+            ];
+            
+            let attempts = parseInt(imgEl.dataset.errorAttempts || "0");
+            if (attempts < fallbacks.length) {
+                imgEl.dataset.errorAttempts = (attempts + 1).toString();
+                imgEl.src = fallbacks[attempts];
+            }
+        }
+
+        // Set dynamic current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Dark Mode Toggle Logic
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        
+        // System / Default Dark theme check
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+            themeIcon.className = 'fa-solid fa-sun text-amber-400';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                themeIcon.className = 'fa-solid fa-sun text-amber-400';
+            } else {
+                themeIcon.className = 'fa-solid fa-moon text-slate-700';
+            }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Toast Helper
+        function showToast(message, isSuccess = true) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.textContent = message;
+            toastIcon.className = isSuccess ? 'fa-solid fa-circle-check text-emerald-400' : 'fa-solid fa-circle-info text-sky-400';
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        // Copy FIDE ID
+        function copyFideID() {
+            const fideId = "10294813";
+            const dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = fideId;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            showToast("FIDE ID 10294813 copied to clipboard!");
+        }
+
+        // Calculate Age dynamically (Born: Oct 9, 2014)
+        function updateLiveAge() {
+            const birthDate = new Date(2014, 9, 9); // Month is 0-indexed (9 = Oct)
+            const now = new Date();
+            let years = now.getFullYear() - birthDate.getFullYear();
+            let months = now.getMonth() - birthDate.getMonth();
+            let days = now.getDate() - birthDate.getDate();
+
+            if (days < 0) {
+                months--;
+                const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += lastMonth.getDate();
+            }
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            const ageString = `${years} yrs, ${months} mos`;
+            document.getElementById('liveAgeText').textContent = ageString;
+        }
+        updateLiveAge();
+
+        // Contact Form Submission
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            showToast("Thank you! Your message has been recorded.", true);
+            event.target.reset();
+        }
+
+        // SWF Knowledge Random Fact Snippets
+        const facts = [
+            {
+                category: "Science & Physics",
+                text: "Light from the Sun takes approximately 8 minutes and 20 seconds to travel 149.6 million kilometers to Earth!"
+            },
+            {
+                category: "Web Coding Concepts",
+                text: "HTML provides structure, CSS provides style, and JavaScript adds interactive intelligence to modern web apps!"
+            },
+            {
+                category: "Chess Trivia",
+                text: "There are more possible unique games of chess (Shannon number: ~10^120) than there are atoms in the observable universe!"
+            },
+            {
+                category: "Astronomy",
+                text: "A day on Venus is longer than a year on Venus! It takes Venus 243 Earth days to rotate once on its axis."
+            },
+            {
+                category: "Computer Science",
+                text: "The first mechanical computer invented by Charles Babbage in 1822 was called the Difference Engine!"
+            }
+        ];
+
+        let currentFactIdx = 0;
+        function generateRandomFact() {
+            currentFactIdx = (currentFactIdx + 1) % facts.length;
+            document.getElementById('factCategory').textContent = facts[currentFactIdx].category;
+            document.getElementById('factText').textContent = `"${facts[currentFactIdx].text}"`;
+        }
+
+        // Interactive Tactics Board Setup: White Rook on d1 (7-3) to d8 (0-3)
+        const puzzlePieces = {
+            "0-6": "♚", "0-5": "♟", "0-7": "♟", "0-4": "♟", // Black king on g8, pawns on f7, g7, h7
+            "7-3": "♖", "7-4": "♔", "7-5": "♙", "7-6": "♙", "7-7": "♙" // White Rook on d1
+        };
+
+        let puzzleSolved = false;
+        let selectedSquare = null;
+
+        function renderPuzzleBoard() {
+            const boardEl = document.getElementById('chessBoard');
+            boardEl.innerHTML = '';
+
+            for (let r = 0; r < 8; r++) {
+                for (let c = 0; c < 8; c++) {
+                    const square = document.createElement('div');
+                    const isDark = (r + c) % 2 === 1;
+                    const squareKey = `${r}-${c}`;
+                    
+                    square.className = `chess-square ${isDark ? 'bg-[#779952] text-slate-900' : 'bg-[#edeed1] text-slate-900'}`;
+                    square.dataset.row = r;
+                    square.dataset.col = c;
+
+                    // Display piece
+                    if (puzzlePieces[squareKey]) {
+                        square.textContent = puzzlePieces[squareKey];
+                    }
+
+                    // Click handler
+                    square.addEventListener('click', () => handleSquareClick(r, c));
+                    boardEl.appendChild(square);
+                }
+            }
+        }
+
+        function handleSquareClick(r, c) {
+            if (puzzleSolved) return;
+
+            const statusEl = document.getElementById('puzzleStatus');
+
+            // Select White Rook on d1 (7, 3)
+            if (r === 7 && c === 3) {
+                selectedSquare = { r: 7, c: 3 };
+                statusEl.textContent = "Status: Rook selected! Click destination square to deliver Checkmate.";
+                statusEl.className = "p-3 rounded-xl bg-sky-950 text-xs font-mono text-sky-400 border border-sky-800";
+                return;
+            }
+
+            // Move to d8 (0, 3)
+            if (selectedSquare && r === 0 && c === 3) {
+                delete puzzlePieces["7-3"];
+                puzzlePieces["0-3"] = "♖";
+                puzzleSolved = true;
+                renderPuzzleBoard();
+
+                statusEl.textContent = "🎉 Checkmate! Rook to d8! Puzzle Solved!";
+                statusEl.className = "p-3 rounded-xl bg-emerald-950 text-xs font-mono text-emerald-400 border border-emerald-800";
+                showToast("Great tactic! Back-rank Checkmate delivered!");
+                return;
+            }
+
+            if (selectedSquare) {
+                statusEl.textContent = "Status: Try again! Move White's Rook to d8 for checkmate.";
+                statusEl.className = "p-3 rounded-xl bg-amber-950 text-xs font-mono text-amber-400 border border-amber-800";
+            }
+        }
+
+        function resetPuzzle() {
+            puzzleSolved = false;
+            selectedSquare = null;
+            delete puzzlePieces["0-3"];
+            puzzlePieces["7-3"] = "♖";
+            
+            const statusEl = document.getElementById('puzzleStatus');
+            statusEl.textContent = "Status: White's turn. Find the best move!";
+            statusEl.className = "p-3 rounded-xl bg-slate-800 text-xs font-mono text-emerald-400 border border-slate-700";
+            renderPuzzleBoard();
+        }
+
+        // Initialize board on window load
+        window.onload = function() {
+            renderPuzzleBoard();
+        };
+    </script>
+</body>
+</html>
